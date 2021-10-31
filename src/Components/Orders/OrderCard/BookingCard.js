@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BookingCard = (props) => {
-        const { _id, name, booking, email, status } = props.booked;
+        const { _id, name, booking, status } = props.booked;
 
         // Handle Booking Cancel:
         const handleCancelBooking = id => {

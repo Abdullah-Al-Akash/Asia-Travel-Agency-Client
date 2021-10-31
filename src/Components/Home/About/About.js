@@ -14,7 +14,7 @@ const About = () => {
                                                 <h4 className="">About Asia Travel Agency</h4>
                                                 <h2 className="fw-bold brand-color">World Best <br /> Travel Agency Company <br /> Since 2015.</h2>
                                         </div>
-                                        <p className="ps-4 pe-5 pt-3">Think of Classic Journeys as your well-connected friend. For more than a quarter of a century, we've been handcrafting walking tours that connect guests with our friends around the world—amazing local guides, artisans, winemakers, hoteliers, restauranteurs, naturalists, and more. It's why Travel + Leisure editors say, "Classic Journeys provides unbeatable access to people and places around the globe."</p>
+                                        <p className="ps-4 pe-5 pt-3">Think of Classic Journeys as your well-connected friend. For more than a quarter of a century, we've been handcrafting walking tours that connect guests with our friends around the world—amazing local guides, artisans, winemakers."</p>
                                 </div>
                         </div>
                 </div>
