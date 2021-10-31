@@ -48,7 +48,7 @@ const CreateAccountForm = () => {
                                         <div className="container mt-5 pt-5">
                                                 <div className="row pt-4 p-5">
                                                         <div className="col-lg-6 signInForm">
-                                                                <h2 className="text-center p-3 text-success fw-bold  mt-4 mb-3">Create An Account</h2>
+                                                                <h2 className="text-center p-3 brand-color fw-bold  mt-4 mb-3">Create An Account</h2>
                                                                 <form onSubmit={createNewAccount} className="w-75 mx-auto">
                                                                         <div className="mb-3">
                                                                                 <label htmlFor="exampleInputEmail1" className="form-label fw-bold">Name</label>

@@ -16,27 +16,34 @@ const ManageAllOrders = () => {
 
         // Handle Booking Cancel:
         const handleCancelBooking = id => {
-                const url = `https://rocky-bayou-98468.herokuapp.com/orders/${id}`;
-                fetch(url, {
-                        method: 'DELETE'
-                })
-                        .then(res => res.json())
-                        .then(data => {
-                                if (data.deletedCount) {
-                                        alert("Are you sure about cancel the tour?");
-                                }
+                const response = window.confirm("Are you sure about cancel the tour?")
+                if (response === true) {
+                        const url = `https://rocky-bayou-98468.herokuapp.com/orders/${id}`;
+                        fetch(url, {
+                                method: 'DELETE'
                         })
+                                .then(res => res.json())
+                                .then(data => {
+                                        if (data.deletedCount) {
+                                                // alert("Are you sure about cancel the tour?");
+                                        }
+                                })
+                }
+                else {
+                        return false
+                }
+
         }
 
         return (
-                <div className="container pt-3">
+                <div className="container pt-5 mt-5">
                         <h4 className="text-center p-5 fw-bold brand-color">Manage All Bookings Summary</h4>
-                        <div className="row text-success">
+                        <div className="row text-success mx-auto">
                                 {/* <h4 className="col-1">S.L</h4> */}
                                 <h4 className="col-3 fw-bold">Name</h4>
                                 <h4 className="col-2 fw-bold">Tour Place</h4>
-                                <h4 className="col-2 fw-bold">Order Cancel</h4>
-                                <h4 className="col-2 fw-bold">Order Approved</h4>
+                                <h4 className="col-2 fw-bold">Cancel Booking</h4>
+                                <h4 className="col-2 fw-bold">Approved</h4>
                                 <h4 className="col-2 fw-bold">Status</h4>
                         </div>
                         <hr />
@@ -44,7 +51,7 @@ const ManageAllOrders = () => {
 
                         {
                                 booking.length ? booking.map(booked =>
-                                        <div key={booked._id} className="row">
+                                        <div key={booked._id} className="row mx-auto">
                                                 <h6 className="col-3">{booked.name}</h6>
                                                 <h6 className="col-2">{booked.booking}</h6>
                                                 <h6 className="col-2 text-center">

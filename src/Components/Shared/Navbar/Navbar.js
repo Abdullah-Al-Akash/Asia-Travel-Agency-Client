@@ -26,29 +26,44 @@ const Navbar = () => {
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul className="navbar-nav text-center ms-auto mb-2 mb-lg-0">
                                                 <li className="nav-item">
-                                                        <Link to="/home" className="nav-link active fw-bold" aria-current="page">Home</Link>
+                                                        <Link to="/home" className="nav-link active fw-bold me-3" aria-current="page">Home</Link>
                                                 </li>
 
-                                                <li className="nav-item">
-                                                        <Link to="/myOrders" className="nav-link active fw-bold" aria-current="page">My Orders</Link>
-                                                </li>
+                                                {
+                                                        user?.email ?
+                                                                <li className="nav-item">
+                                                                        <Link to="/myBookings" className="nav-link active fw-bold" aria-current="page">My Orders</Link>
+                                                                </li>
+                                                                :
+                                                                ''
+                                                }
 
-                                                <li className="nav-item">
-                                                        <Link to="/manageAllOrders" className="nav-link active fw-bold" aria-current="page">Manage All Orders</Link>
-                                                </li>
+                                                {
+                                                        user?.email ?
+                                                                <li className="nav-item">
+                                                                        <Link to="/manageAllBookings" className="nav-link active fw-bold" aria-current="page">Manage All Orders</Link>
+                                                                </li>
+                                                                :
+                                                                ''
+                                                }
 
+                                                {
+                                                        user?.email ?
+                                                                <li className="nav-item">
+                                                                        <Link to="/addNewService" className="nav-link active fw-bold" aria-current="page">Add New Service</Link>
+                                                                </li>
+                                                                :
+                                                                ''
+                                                }
                                                 <li className="nav-item">
-                                                        <Link to="/addNewService" className="nav-link active fw-bold" aria-current="page">Add New Service</Link>
-                                                </li>
-                                                {/* <li className="nav-item">
-                                                        <p className="nav-link active text-success fw-bold">
+                                                        <p style={{ color: 'orangered' }} className="nav-link active fw-bold">
                                                                 {
                                                                         user?.email ?
                                                                                 user?.displayName :
                                                                                 ''
                                                                 }
                                                         </p>
-                                                </li> */}
+                                                </li>
                                                 <li className="nav-item">
                                                         {
                                                                 user?.email ?

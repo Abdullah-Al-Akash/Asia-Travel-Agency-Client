@@ -18,7 +18,7 @@ const AddNewService = () => {
                         })
         }
         return (
-                <div className="container pt-3 pb-5 new-service">
+                <div className="container mt-5 pt-5 pb-5 new-service">
                         <h3 className="text-center p-5 fw-bold brand-color text-decoration-underline">Please Add New Service</h3>
                         <div className="row">
                                 <div className="col-lg-6 form-section p-5">

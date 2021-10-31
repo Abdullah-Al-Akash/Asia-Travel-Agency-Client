@@ -44,7 +44,7 @@ const Login = () => {
 
                                                 <div className="row pt-4 p-5">
                                                         <div className="col-lg-6 signInForm">
-                                                                <h2 className="text-center text-success p-4 fw-bold mt-5 mb-3">Please Login</h2>
+                                                                <h2 className="text-center brand-color p-4 fw-bold mt-5 mb-3">Please Login</h2>
                                                                 <form onSubmit={handleLogin} className="w-75 mx-auto">
                                                                         <div className="mb-3">
                                                                                 <label htmlFor="exampleInputEmail1" className="form-label fw-bold">Email address</label>

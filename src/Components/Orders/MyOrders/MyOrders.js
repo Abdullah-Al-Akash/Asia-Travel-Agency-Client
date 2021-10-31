@@ -17,9 +17,8 @@ const MyOrders = () => {
         const usersBooking = booking?.filter(booked => booked.email === user?.email)
         return (
                 <div className="container mt-5 pt-5">
-                        <h3>Hello My Orders</h3>
-                        <div className="row text-success">
-                                {/* <h4 className="col-1">S.L</h4> */}
+                        <h3 className="text-center brand-color fw-bold mt-5">My Bookings</h3>
+                        <div className="row text-success mt-5 mx-auto">
                                 <h4 className="col-3 fw-bold">Name</h4>
                                 <h4 className="col-2 fw-bold">Tour Place</h4>
                                 <h4 className="col-2 fw-bold">Order Cancel</h4>
@@ -27,12 +26,15 @@ const MyOrders = () => {
                         </div>
                         <hr />
                         {
-                                usersBooking?.map(booked => <BookingCard
-                                        key={booked._id}
-                                        booked={booked}
-                                >
+                                usersBooking.length ?
+                                        usersBooking?.map(booked => <BookingCard
+                                                key={booked._id}
+                                                booked={booked}
+                                        >
 
-                                </BookingCard>)
+                                        </BookingCard>)
+                                        :
+                                        <h4 className="text-center text-danger">There is Booking You did</h4>
                         }
                 </div>
         );
