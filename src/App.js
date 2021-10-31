@@ -16,6 +16,7 @@ import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import MyOrders from './Components/Orders/MyOrders/MyOrders'
 import ManageAllOrders from './Components/Orders/ManageAllOrders/ManageAllOrders';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -44,6 +45,9 @@ function App() {
             </PrivateRoute>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
           <Footer />

@@ -40,7 +40,7 @@ const AddNewService = () => {
                                                         <input className="form-control" {...register("img")} placeholder="Image URL" />
                                                 </div>
                                                 <div className="mb-3 d-grid gap-2">
-                                                        <input className="btn btn-dark fw-bold fs-4" type="submit" value="Add Service" />
+                                                        <input className="btn btn-dark fw-bold fs-4" type="submit" value="Add New Booking" />
                                                 </div>
                                         </form>
                                 </div>
