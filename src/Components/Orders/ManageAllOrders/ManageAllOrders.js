@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Approve from '../Approve/Approve';
-import ManageAllOrdersCard from '../ManageAllOrdersCard/ManageAllOrdersCard';
 
 const ManageAllOrders = () => {
         const [booking, setBooking] = useState([]);
@@ -43,14 +42,12 @@ const ManageAllOrders = () => {
                                 <h4 className="col-3 fw-bold">Name</h4>
                                 <h4 className="col-2 fw-bold">Tour Place</h4>
                                 <h4 className="col-2 fw-bold">Cancel Booking</h4>
-                                <h4 className="col-2 fw-bold">Approved</h4>
+                                <h4 className="col-2 fw-bold">Approve</h4>
                                 <h4 className="col-2 fw-bold">Status</h4>
                         </div>
                         <hr />
-
-
                         {
-                                booking.length ? booking.map(booked =>
+                                booking?.map(booked =>
                                         <div key={booked._id} className="row mx-auto">
                                                 <h6 className="col-3">{booked.name}</h6>
                                                 <h6 className="col-2">{booked.booking}</h6>
@@ -61,8 +58,6 @@ const ManageAllOrders = () => {
                                                 <h6 className="col-2">{booked.status}</h6>
                                         </div>
                                 )
-                                        :
-                                        <h3 className="text-center text-danger">There is no booking you confirm. Please make sure booking tour!</h3>
                         }
                 </div >
         );

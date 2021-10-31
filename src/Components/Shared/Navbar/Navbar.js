@@ -32,7 +32,7 @@ const Navbar = () => {
                                                 {
                                                         user?.email ?
                                                                 <li className="nav-item">
-                                                                        <Link to="/myBookings" className="nav-link active fw-bold" aria-current="page">My Orders</Link>
+                                                                        <Link to="/myBookings" className="nav-link active fw-bold" aria-current="page">My Bookings</Link>
                                                                 </li>
                                                                 :
                                                                 ''
@@ -41,7 +41,7 @@ const Navbar = () => {
                                                 {
                                                         user?.email ?
                                                                 <li className="nav-item">
-                                                                        <Link to="/manageAllBookings" className="nav-link active fw-bold" aria-current="page">Manage All Orders</Link>
+                                                                        <Link to="/manageAllBookings" className="nav-link active fw-bold" aria-current="page">Manage All Bookings</Link>
                                                                 </li>
                                                                 :
                                                                 ''
@@ -50,7 +50,7 @@ const Navbar = () => {
                                                 {
                                                         user?.email ?
                                                                 <li className="nav-item">
-                                                                        <Link to="/addNewService" className="nav-link active fw-bold" aria-current="page">Add New Service</Link>
+                                                                        <Link to="/addNewService" className="nav-link active fw-bold" aria-current="page">Add New Booking</Link>
                                                                 </li>
                                                                 :
                                                                 ''

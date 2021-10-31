@@ -26,15 +26,13 @@ const MyOrders = () => {
                         </div>
                         <hr />
                         {
-                                usersBooking.length ?
-                                        usersBooking?.map(booked => <BookingCard
-                                                key={booked._id}
-                                                booked={booked}
-                                        >
 
-                                        </BookingCard>)
-                                        :
-                                        <h4 className="text-center text-danger">There is Booking You did</h4>
+                                usersBooking?.map(booked => <BookingCard
+                                        key={booked._id}
+                                        booked={booked}
+                                >
+
+                                </BookingCard>)
                         }
                 </div>
         );

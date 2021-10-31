@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import './Booking.css';
 
 const Booking = () => {
-        const { id } = useParams()
+        const { id } = useParams();
+        const history = useHistory();
 
         // State For Data:
         const [service, setService] = useState({});
@@ -19,7 +20,6 @@ const Booking = () => {
 
         // User Information:
         const { user } = useAuth();
-        console.log(user)
         // React Hook Form:
         const { register, handleSubmit, reset } = useForm();
         const onSubmit = data => {
@@ -38,6 +38,7 @@ const Booking = () => {
                                 if (result.insertedId) {
                                         alert("Successfully Booked! Have a safe journey!");
                                         reset()
+                                        history.push('/myBookings')
                                 }
                         })
         };
