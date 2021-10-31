@@ -40,15 +40,15 @@ const Footer = () => {
                                                         <h3 className="fw-bold pb-3 brand-color">Contact Info</h3>
                                                 </div>
                                                 <div className="d-flex">
-                                                        <i className="fas fa-map-marker-alt pt-2"></i>
+                                                        <i className="fas fa-map-marker-alt pt-2 brand-color"></i>
                                                         <h6 className="ps-3">Maskanda, Passport Office Road, Mymensingh.</h6>
                                                 </div>
                                                 <div className="d-flex pt-2">
-                                                        <i className="fas fa-envelope pt-1"></i>
+                                                        <i className="fas fa-envelope pt-1 brand-color"></i>
                                                         <h6 className="ps-3">support@asiatravelagency.com</h6>
                                                 </div>
                                                 <div className="d-flex pt-2">
-                                                        <i className="fas fa-phone-alt pt-1"></i>
+                                                        <i className="fas fa-phone-alt pt-1 brand-color"></i>
                                                         <h6 className="ps-3">
                                                                 +6221.2002.2012</h6>
                                                 </div>

@@ -43,7 +43,8 @@ const Booking = () => {
         };
         return (
                 <div className="container booking mt-5 pt-5 pb-5">
-                        <div className="row">
+                        <h3 className="text-center fw-bolder mt-5">Please Confirm Booking</h3>
+                        <div className="row pt-5">
                                 <div className="col-lg-5 tour-details">
                                         <h2 className="brand-color fw-bold text-center">{service.name}</h2>
                                         <img src={service.img} className="img-fluid p-4" alt="" />

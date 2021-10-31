@@ -15,7 +15,7 @@ const Navbar = () => {
                 history.push('/login');
         }
         return (
-                <nav className="navbar navbar-expand-lg navbar-dark navbar-bg">
+                <nav className="navbar navbar-expand-lg navbar-dark fixed-top navbar-bg">
                         <div className="container">
                                 <Link to="/" className="navbar-brand" href="#">
                                         <img src={logo} className="img-fluid rounded-circle m-0 p-0" width="70" alt="" /> <span className="fw-bold m-0 p-0 text-white fs-6"><span className="fw-bold fs-2 brand-color">A</span>sia Travel Agency</span>

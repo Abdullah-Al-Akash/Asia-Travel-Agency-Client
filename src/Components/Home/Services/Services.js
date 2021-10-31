@@ -21,12 +21,16 @@ const Services = () => {
                                 {/* Show Services by Mapping */}
                                 <div className="row row-cols-1 row-cols-md-3 g-4 mt-5">
                                         {
-                                                services.map(service => <Service
+                                                services.length ? services.map(service => <Service
                                                         key={service._id}
                                                         service={service}
                                                 >
 
                                                 </Service>)
+                                                        :
+                                                        <div style={{ height: '80vh' }} className="mx-auto mt-5">
+                                                                <img src="https://trails.ca/wp-content/uploads/2020/10/loading-spinner.gif" className="img-fluid" alt="" />
+                                                        </div>
                                         }
                                 </div>
                         </div>
